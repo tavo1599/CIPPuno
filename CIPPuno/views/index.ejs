@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+    <script src="https://unpkg.com/alpinejs/dist/cdn.min.js" defer></script>
+  </head>
+  <body>
+    <%- include('partials/navbar'); %>
+
+    <div
+      id="carouselExampleControls"
+      class="carousel slide relative"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner relative w-full overflow-hidden">
+        <div class="carousel-item active relative float-left w-full">
+          <img src="img/portal.jpg" class="block w-full" alt="Wild Landscape" />
+        </div>
+        <div class="carousel-item relative float-left w-full">
+          <img
+            src="img/portal3.jpg"
+            height="80px"
+            class="block w-full"
+            alt="Camera"
+          />
+        </div>
+        <div class="carousel-item relative float-left w-full">
+          <img
+            src="img/Portada2.jpg"
+            class="block w-full"
+            alt="Exotic Fruits"
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev"
+      >
+        <span
+          class="carousel-control-prev-icon inline-block bg-no-repeat"
+          aria-hidden="true"
+        ></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="next"
+      >
+        <span
+          class="carousel-control-next-icon inline-block bg-no-repeat"
+          aria-hidden="true"
+        ></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div class="bg-red-700 py-14 mt-20">
+      <h1 class="mt-5 text-6xl text-center text-white">
+        Servicios al Ingeniero
+      </h1>
+
+      <div class="flex flex-wrap space-x-8 justify-center mt-10">
+        <div
+          class="grid justify-items-center py-5 rounded-lg border text-red-900 bg-gray-50 hover:scale-105 transition duration-700 hover:bg-red-700 hover:text-white"
+        >
+          <a href="/buscar">
+            <img class="" src="img/buscar.png" width="50px" />
+          </a>
+          <div class="w-64">
+            <a href="/buscar">
+              <p class="text-center mb-1 text-lg font-bold tracking-tight">
+                Busqueda de Colegiado
+              </p>
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="grid justify-items-center py-5 rounded-lg border text-red-900 bg-gray-50 hover:scale-105 transition duration-700 hover:bg-red-700 hover:text-white"
+        >
+          <a class="" href="#">
+            <img class="" src="img/trabajo.png" width="50px" />
+          </a>
+          <div class="w-64">
+            <a href="#">
+              <p class="text-center mb-1 text-lg font-bold tracking-tight">
+                Bolsa de Trabajo
+              </p>
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="grid justify-items-center py-5 rounded-lg border text-red-900 bg-gray-50 hover:scale-105 transition duration-700 hover:bg-red-700 hover:text-white"
+        >
+          <a class="" href="#">
+            <img class="" src="img/pago.png" width="50px" />
+          </a>
+          <div class="w-64">
+            <a href="#">
+              <p class="text-center mb-1 text-lg font-bold tracking-tight">
+                Pago en Linea
+              </p>
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="grid justify-items-center py-5 rounded-lg border text-red-900 bg-gray-50 hover:scale-105 transition duration-700 hover:bg-red-700 hover:text-white"
+        >
+          <a class="" href="/colegiatura">
+            <img class="" src="img/colegiado.png" width="50px" />
+          </a>
+          <div class="w-64">
+            <a href="#">
+              <p class="text-center mb-1 text-lg font-bold tracking-tight">
+                Colegiatura
+              </p>
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="grid justify-items-center py-5 rounded-lg border text-red-900 bg-gray-50 hover:scale-105 transition duration-700 hover:bg-red-700 hover:text-white"
+        >
+          <a class="" href="#">
+            <img class="" src="img/certificado.png" width="50px" />
+          </a>
+          <div class="w-64">
+            <a href="#">
+              <p class="text-center mb-1 text-lg font-bold tracking-tight">
+                Certificados
+              </p>
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="grid justify-items-center py-5 rounded-lg border text-red-900 bg-gray-50 hover:scale-105 transition duration-700 hover:bg-red-700 hover:text-white"
+        >
+          <a class="" href="#">
+            <img class="" src="img/capitulos.png" width="50px" />
+          </a>
+          <div class="w-64">
+            <a href="#">
+              <p class="text-center mb-1 text-lg font-bold tracking-tight">
+                Capitulos
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="text-center mt-20 font-bold mb-20">
+        <h1 class="text-red-700 text-3xl">Quienes Somos</h1>
+        <h2 class="text-2xl my-5 font-bold">
+          COLEGIO DE INGENIEROS DEL PERU CONSEJO <br />
+          DEPARTAMENTAL PUNO
+        </h2>
+        <!-- <hr class="my-4 border-red-700 widht-15px" /> -->
+      </div>
+
+      <div>
+        <ul>
+          <li class="flex space-x-60 justify-center">
+            <button
+              class="text-white hover:bg-white border-2 hover:text-black px-8 py-2 bg-red-700"
+              type="button"
+              data-modal-toggle="large-modal"
+            >
+              Mision
+            </button>
+            <a
+              class="text-white hover:bg-white border-2 hover:text-black px-8 py-2 bg-red-700"
+              href="#"
+              >Vision</a
+            >
+            <a
+              class="text-white hover:bg-white border-2 hover:text-black px-8 py-2 bg-red-700"
+              href="#"
+              >Reseña</a
+            >
+            <a
+              class="text-white hover:bg-white border-2 hover:text-black px-8 py-2 bg-red-700"
+              href="#"
+              >Objetivos</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="flex flex-nowrap justify-center space-x-7 border my-10 mx-96 py-9"
+    >
+      <div class="">
+        <img src="img/vision.jpg" width="500px" />
+      </div>
+      <div class="w-1/3 mx-10">
+        <h3 class="font-bold text-xl">Vision</h3>
+        <p>
+          Ser reconocida como una institución sólida, que patrocina el manejo
+          eficiente del conocimiento, con la finalidad de orientar a la sociedad
+          peruana en las grandes decisiones, fomentando la practica de valores y
+          comportamiento ético de los ingenieros profesionales, así como
+          elevando la calidad de la ingeniería, apoyando el crecimiento del país
+          en el contexto de la globalización.
+        </p>
+      </div>
+    </div>
+
+    <%- include('partials/footer'); %>
+  </body>
+</html>

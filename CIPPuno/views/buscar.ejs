@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Buscar</title>
+  </head>
+  <body>
+    <%- include('partials/navbar'); %>
+    <div
+      class="w-auto border flex flex-wrap space-x-4 justify-center py-10 mt-14 mb-16 bg-red-700"
+    >
+      <div>
+        <label
+          for="countries"
+          class="block mb-2 text-sm font-medium text-slate-900"
+          >Buscar por:</label
+        >
+        <select id="countries" class="text-sm rounded-lg block w-full p-2.5">
+          <option selected="">--Seleccionar--</option>
+          <option value="apellidos">Apellidos y Nombres</option>
+          <option value="Codigo">Codigo CIP</option>
+          <option value="dni">Dni</option>
+        </select>
+      </div>
+
+      <div class="mb-6">
+        <label
+          for="base-input"
+          class="block mb-2 w-80 text-sm font-medium text-slate-900"
+          >Buscar.</label
+        >
+        <input
+          type="text"
+          id="base-input"
+          class="text-sm rounded-lg block w-full p-2.5"
+        />
+      </div>
+
+      <div class="align-middle">
+        <button
+          type="button"
+          class="text-white bg-gradient-to-r mt-7 from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+        >
+          Buscar
+        </button>
+      </div>
+    </div>
+    <div class="container mx-auto px-4 border-2">
+      <h3 class="my-5 font-semibold">Datos del Colegiado</h3>
+      <hr />
+      <div class="flex justify-between pt-5">
+        <div class="">
+          <ul>
+            <li>Numero CIP:</li>
+            <li>Primer Apellido:</li>
+            <li>Segundo Apellido:</li>
+            <li>Nombres:</li>
+            <li>Condicion:</li>
+            <li>Fecha de Incorporacion:</li>
+          </ul>
+        </div>
+        <div><img src="img/perfil.png" width="150px" /></div>
+      </div>
+      <div class="border p-2 mt-3">
+        <h3 class="py-3 font-semibold">Formacion Academica</h3>
+        <hr />
+        <div class="flex flex-col">
+          <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+            <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+              <div class="overflow-hidden">
+                <table class="min-w-full text-center">
+                  <thead>
+                    <tr>
+                      <th
+                        scope="col"
+                        class="text-sm font-medium text-gray-900 px-6 py-4"
+                      >
+                        Capitulo
+                      </th>
+                      <th
+                        scope="col"
+                        class="text-sm font-medium text-gray-900 px-6 py-4"
+                      >
+                        Especialidad
+                      </th>
+                      <th
+                        scope="col"
+                        class="text-sm font-medium text-gray-900 px-6 py-4"
+                      >
+                        Fecha de Reconocimiento
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td
+                        class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                      >
+                        ....
+                      </td>
+                      <td
+                        class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                      >
+                        ....
+                      </td>
+                      <td
+                        class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                      >
+                        ../../..
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-start-1 col-end-7"><%- include('partials/footer'); %></div>
+  </body>
+</html>

@@ -28,4 +28,10 @@ router.get('/colegiatura', function(req, res, next) {
 router.get('/index2', function(req, res, next) {
   res.render('index2');
 });
+router.get('/col-colegiatura', function(req, res, next) {
+  res.render('col-colegiatura');
+});
+router.get('/pago', function(req, res, next) {
+  res.render('pago');
+});
 module.exports = router;

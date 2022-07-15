@@ -3684,6 +3684,12 @@ textarea.form-control.is-invalid {
 .mt-3 {
   margin-top: 0.75rem;
 }
+.mt-5 {
+  margin-top: 1.25rem;
+}
+.ml-24 {
+  margin-left: 6rem;
+}
 .mr-3 {
   margin-right: 0.75rem;
 }
@@ -3699,14 +3705,8 @@ textarea.form-control.is-invalid {
 .ml-2 {
   margin-left: 0.5rem;
 }
-.mt-5 {
-  margin-top: 1.25rem;
-}
 .mb-8 {
   margin-bottom: 2rem;
-}
-.ml-24 {
-  margin-left: 6rem;
 }
 .ml-28 {
   margin-left: 7rem;
@@ -4214,11 +4214,11 @@ textarea.form-control.is-invalid {
 .pt-5 {
   padding-top: 1.25rem;
 }
-.pl-9 {
-  padding-left: 2.25rem;
-}
 .pl-36 {
   padding-left: 9rem;
+}
+.pl-9 {
+  padding-left: 2.25rem;
 }
 .pr-2 {
   padding-right: 0.5rem;
@@ -4254,6 +4254,10 @@ textarea.form-control.is-invalid {
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -4261,10 +4265,6 @@ textarea.form-control.is-invalid {
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
-}
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 .text-lg {
   font-size: 1.125rem;

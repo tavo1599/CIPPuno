@@ -4,6 +4,11 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+var flash = require('express-flash');
+var session = require('express-session');
+var mysql = require('mysql');
+var connection  = require('./lib/db');
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
@@ -19,8 +24,18 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+const oneDay = 1000 * 60 * 60 * 24;
+app.use(session({ 
+    cookie: { maxAge:  oneDay},
+    store: new session.MemoryStore,
+    saveUninitialized: true,
+    resave: 'false',
+    secret: '0123456789'
+}))
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

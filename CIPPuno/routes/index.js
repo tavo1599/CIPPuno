@@ -35,6 +35,10 @@ router.get('/pago', function(req, res, next) {
   res.render('pago');
 });
 
+router.get('/col-certificado', function(req, res, next) {
+  res.render('col-certificado');
+});
+
 router.post('/index2', function(req, res, next) {
   email=req.body.email;
   password=req.body.password;

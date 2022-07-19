@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,900"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="https://unpkg.com/alpinejs/dist/cdn.min.js" defer></script>
+    <title>Formulario</title>
+  </head>
+  <body>
+    <%- include('partials/col-navbar'); %>
+
+    <div class="flex flex-col justify-center mt-24 p-12 border bg-red-700">
+      <div class="form__top">
+        <h2 class="font-semibold text-xl text-white pb-6">
+          Registro de certificados
+        </h2>
+      </div>
+      <form class="form__reg" action="">
+        <input
+          class="input"
+          type="text"
+          placeholder="&#128100;  Usuario Nombre"
+          required
+          autofocus
+        />
+        <input
+          class="input"
+          type="text"
+          placeholder="&#128100;  Docente"
+          required
+          autofocus
+        />
+        <input
+          class="input"
+          type="text"
+          placeholder="&#x1F4DA;  Curso"
+          required
+          autofocus
+        />
+        <input
+          class="input"
+          type="text"
+          placeholder="&#x1F4DA;  Tipo de Certificado"
+          required
+          autofocus
+        />
+        <input
+          class="input"
+          type="text"
+          placeholder="&#x1F5C9;  DNI"
+          required
+        />
+
+        <input
+          class="input"
+          type="text"
+          placeholder="&#8962;  Dirección"
+          required
+        />
+
+        <input
+          class="input"
+          type="datetime-local"
+          placeholder="Fecha de Iniciacion"
+          required
+        />
+        <input
+          class="input"
+          type="datetime-local"
+          placeholder="Fecha de Finalisacion"
+          required
+        />
+
+        <div class="container">
+          <input type="radio" name="sexo" id="hombre" />
+          <label for="hombre">Hombre</label>
+
+          <input type="radio" name="sexo" id="mujer" />
+          <label for="mujer">Mujer</label>
+        </div>
+        <div class="btn__form">
+          <button
+            type="submit"
+            class="btn__submit bg-transparent hover:bg-white font-semibold hover:text-black py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+          >
+            Registrar
+          </button>
+
+          <button
+            type="reset"
+            class="btn__reset bg-transparent hover:bg-white font-semibold hover:text-black py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+          >
+            Cancelar
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

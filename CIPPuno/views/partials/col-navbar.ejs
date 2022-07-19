@@ -57,7 +57,7 @@
         <div class="hidden sm:block sm:ml-6">
           <div class="flex space-x-4">
             <a
-              href="#"
+              href="/main"
               class="text-gray-300 hover:bg-white hover:text-black px-3 py-6 text-sm font-medium"
               aria-current="page"
               >Inicio</a
@@ -131,8 +131,17 @@
               ><%= locals.email %></a
             >
 
+            <button
+              data-modal-toggle="default- modal"
+              class="block px-4 py-2 text-sm text-gray-700"
+              type="button"
+              data-modal-toggle="defaultModal"
+            >
+              Configuracion
+            </button>
+
             <a
-              href="#pablo"
+              href="/logout"
               class="block px-4 py-2 text-sm text-gray-700"
               role="menuitem"
               tabindex="-1"
@@ -186,3 +195,4 @@
     </div>
   </div>
 </nav>
+<script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>

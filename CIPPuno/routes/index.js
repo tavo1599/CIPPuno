@@ -30,6 +30,7 @@ router.get('/colegiatura', function(req, res, next) {
 router.get('/col-colegiatura', function(req, res, next) {
   res.render('col-colegiatura');
 });
+
 router.get('/pago', function(req, res, next) {
   res.render('pago');
 });
@@ -63,17 +64,21 @@ router.get('/main', function(req, res, next) {
   
     res.locals.idu=req.session.idu;
     res.locals.email=req.session.email;
-    res.locals.loggedin=req.session.loggedin;    
-      res.render('index2',);
+    res.locals.loggedin=req.session.loggedin;  
+    res.locals.numero_cip=req.session.numero_cip;
+
+      res.render('index2');
+      
     });
     
-  
+
 
 
 router.get('/logout', function (req, res) {
   req.session.destroy();
   res.redirect("/");
 });
+
 
 
 module.exports = router;

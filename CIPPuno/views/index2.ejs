@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <script src="https://unpkg.com/alpinejs/dist/cdn.min.js" defer></script>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css"
+    />
     <title>CIP</title>
   </head>
   <body>
@@ -17,8 +22,19 @@
       <div class="flex justify-between pt-5">
         <div class="">
           <ul>
-            <li>Numero CIP:</li>
-            <li>Primer Apellido:</li>
+            <li>
+              Numero CIP:
+              <span class="font-semibold text-base text-gray-800"
+                ><%= locals.numero_cip %></span
+              >
+            </li>
+
+            <li>
+              Primer Apellido:
+              <span class="font-semibold text-base text-gray-800"
+                ><%= locals.primer_apellido %></span
+              >
+            </li>
             <li>Segundo Apellido:</li>
             <li>Nombres:</li>
             <li>Condicion:</li>
@@ -281,5 +297,6 @@
       </div>
     </div>
     <%- include('partials/footer'); %>
+    <script src="../path/to/@themesberg/flowbite/dist/flowbite.bundle.js"></script>
   </body>
 </html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="https://unpkg.com/alpinejs/dist/cdn.min.js" defer></script>
+    <title>Capacitaciones</title>
+  </head>
+
+  <body>
+    <%- include('partials/col-navbar'); %>
+    <div class="">
+      <div class="bg-red-700 py-10 pl-36">
+        <div class="flex flex-wrap space-x-8 justify-center mt-10">
+          <div
+            class="grid justify-items-center py-5 rounded-lg border text-red-900 bg-gray-50 hover:scale-105 transition duration-700 hover:bg-red-700 hover:text-white"
+            onclick="asignar('Magister')"
+          >
+            <div class="w-64">
+              <p class="text-center mb-1 text-lg font-bold tracking-tight">
+                Magister
+              </p>
+            </div>
+          </div>
+          <div
+            class="grid justify-items-center py-5 rounded-lg border text-red-900 bg-gray-50 hover:scale-105 transition duration-700 hover:bg-red-700 hover:text-white"
+            onclick="asignar('Diplomados')"
+          >
+            <div class="w-64">
+              <p class="text-center mb-1 text-lg font-bold tracking-tight">
+                Diplomados
+              </p>
+            </div>
+          </div>
+          <div
+            class="grid justify-items-center py-5 rounded-lg border text-red-900 bg-gray-50 hover:scale-105 transition duration-700 hover:bg-red-700 hover:text-white"
+            onclick="asignar('Seminarios')"
+          >
+            <div class="w-64">
+              <p class="text-center mb-1 text-lg font-bold tracking-tight">
+                Seminarios
+              </p>
+            </div>
+          </div>
+          <div
+            class="grid justify-items-center py-5 rounded-lg border text-red-900 bg-gray-50 hover:scale-105 transition duration-700 hover:bg-red-700 hover:text-white"
+            onclick="asignar('Cursos')"
+          >
+            <div class="w-64">
+              <p class="text-center mb-1 text-lg font-bold tracking-tight">
+                Cursos
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container mx-auto px-24 mt-24">
+        <div class="text-xl">
+          <div>
+            <div class="">
+              <center>
+                <h1 class="mb-6"><b>Inscripción para el Curso:</b></h1>
+              </center>
+              <form action="capacitacion/agregar" method="post">
+                <div class="mb-4">
+                  <label
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    for="username"
+                  >
+                    Correo:
+                  </label>
+                  <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    type="text"
+                    placeholder="Correo"
+                    name="correo"
+                  />
+                </div>
+                <div class="mb-4">
+                  <label
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    for="username"
+                  >
+                    Nombres y Apellidos:
+                  </label>
+                  <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    type="text"
+                    placeholder="Nombres y Apellidos"
+                    name="nombres"
+                  />
+                </div>
+                <div class="mb-4">
+                  <label
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    for="username"
+                  >
+                    Nro CIP:
+                  </label>
+                  <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    type="text"
+                    placeholder="Nro CIP"
+                    name="cip"
+                  />
+                </div>
+                <div class="mb-4">
+                  <label
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    for="username"
+                  >
+                    Celular
+                  </label>
+                  <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    type="text"
+                    placeholder="Celular"
+                    name="celular"
+                  />
+                </div>
+                <div class="mb-4">
+                  <label
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    for="username"
+                  >
+                    Establecimiento o institución donde trabaja
+                  </label>
+                  <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    type="text"
+                    placeholder="Establecimiento o institución donde trabaja"
+                    name="establecimiento"
+                  />
+                  <input type="hidden" name="curso" id="curso" />
+                </div>
+                <div class="form-group">
+                  <button
+                    type="submit"
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"
+                  >
+                    Enviar
+                  </button>
+                  <button
+                    type="reset"
+                    class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+                  >
+                    Borrar Comentario
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-10"
+          role="alert"
+        >
+          <strong class="font-bold"> </strong>
+        </div>
+
+        <div
+          class="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md mt-10"
+          role="alert"
+        >
+          <strong class="font-bold"> </strong>
+        </div>
+      </div>
+    </div>
+    <%- include('partials/footer'); %>
+  </body>
+</html>
+
+<script>
+  function asignar(curso) {
+    document.getElementById("curso").value = curso;
+  }
+</script>

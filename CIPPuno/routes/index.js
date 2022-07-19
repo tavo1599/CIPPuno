@@ -39,6 +39,10 @@ router.get('/col-certificado', function(req, res, next) {
   res.render('col-certificado');
 });
 
+router.get('/capacitaciones', function(req, res, next) {
+  res.render('capacitaciones');
+});
+
 router.post('/index2', function(req, res, next) {
   email=req.body.email;
   password=req.body.password;
